@@ -6,7 +6,7 @@
   <h1>Telegram Doğruluk mu? Cesaret mi? Oyun Botu</h1>
 </div>
 <p align="center">
-        <a href="https://github.com/ReislerSupport/dcbot2">~Bot~</a>
+        <a href="https://github.com/EkimozSupport/Rosem-Dc-bot">~Bot~</a>
 </p>
 
 ----
