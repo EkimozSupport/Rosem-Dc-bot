@@ -28,8 +28,8 @@ K_G = Client(
 
 # Start Buttonu İcin Def Oluşturalım :)
 def button():
-	BUTTON=[[InlineKeyboardButton(text="👨🏻‍💻 Sahibim ",url="https://t.me/kizilsancaksahibi")]]
-	BUTTON+=[[InlineKeyboardButton(text="🌱 Grubumuz 🌱",url="https://t.me/kizilsancak")]]
+	BUTTON=[[InlineKeyboardButton(text="👨🏻‍💻 Ücretli Bot Kanal ",url="https://t.me/ucretlibotlar")]]
+	BUTTON+=[[InlineKeyboardButton(text="🌱 Grubumuz 🌱",url="https://t.me/Smailesi")]]
 	return InlineKeyboardMarkup(BUTTON)
 
 # Kullanıcı Start Komutunu Kullanınca Selam'layalım :)
@@ -37,21 +37,21 @@ def button():
 async def _(client, message):
 	user = message.from_user # Kullanıcın Kimliğini Alalım
 
-	await message.reply_text(text="**Merhaba {}!**\n\n__Ben Reisler Dc Eğlence Botuyum:) \nMusic Botumuzu Denediniz Mi @Reislermuzikbot Oyun Komutu => /dc".format(
+	await message.reply_text(text="**Naber {}!**\n\n__Ben Minik Dc Eğlence Botuyum:) \nEtiketleme Botumuzu Denediniz Mi @Kirmizikadindavetbot  Kendi grubunuza Ücretli bot yaptırmak için @ucretlibotlar Oyun Komutu => /Sor".format(
 		user.mention, # Kullanıcı'nın Adı
 		),
 	disable_web_page_preview=True, # Etiketin Önizlemesi Olmaması İcin Kullanıyoruz
 	reply_markup=button() # Buttonlarımızı Ekleyelim
 	)
 
-# Dc Komutu İcin Olan Buttonlar
+# Sor Komutu İcin Olan Buttonlar
 def d_or_c(user_id):
 	BUTTON = [[InlineKeyboardButton(text="✅ Doğruluk", callback_data = " ".join(["d_data",str(user_id)]))]]
 	BUTTON += [[InlineKeyboardButton(text="💪 Cesaret", callback_data = " ".join(["c_data",str(user_id)]))]]
 	return InlineKeyboardMarkup(BUTTON)
 
-# Dc Komutunu Oluşturalım
-@K_G.on_message(filters.command("dc"))
+# Sor Komutunu Oluşturalım
+@K_G.on_message(filters.command("Sor"))
 async def _(client, message):
 	user = message.from_user
 
